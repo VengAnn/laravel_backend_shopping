@@ -30,6 +30,7 @@ class FoodsController extends AdminController
     protected function grid()
     {
         $grid = new Grid(new Food());
+        $grid -> model()->latest();
 
         $grid->column('id', __('Id'));
         $grid->column('name', __('Name'));
